@@ -23,7 +23,7 @@ EXPOSE 8080
 
 #RUN curl http://192.168.1.14:8081/nexus/content/repositories/macmartin/org/springframework/ms-spring-boot-docker/0.1.0/ms-spring-boot-docker-0.1.0.jar -o /opt/openshift/app.jar
 
-RUN echo ${BINARY_PATH}
+RUN echo 'checking the path has been passed ${BINARY_PATH}'
 RUN curl ${BINARY_PATH} -o /opt/openshift/app.jar
 
 
